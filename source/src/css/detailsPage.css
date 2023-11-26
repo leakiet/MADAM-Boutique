@@ -1,0 +1,12 @@
+.detailsPage{
+    text-align: center;
+    font-family: sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.detailsPage1{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
