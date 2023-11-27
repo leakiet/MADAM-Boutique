@@ -8,7 +8,7 @@
     "brand": "Lady Beauty",
     "designer": "Anna J",
     "category": "Accessory",
-    "type": "Bag",
+    "tags": "Bag",
     "image":[
         "/product_images/ACCESSORIES/BAG/Beaded Top Handle Bag/B1326_1.webp",
         "/product_images/ACCESSORIES/BAG/Beaded Top Handle Bag/B1326_2.webp",
@@ -23,7 +23,7 @@
     "brand": "Charles",
     "designer": "Oliver",
     "category": "Accessory",
-    "type": "Bag",
+    "tags": "Bag",
     "image":[
         "/product_images/ACCESSORIES/BAG/Duo Chain Handle Shoulder Bag/B3629_1.webp",
         "/product_images/ACCESSORIES/BAG/Duo Chain Handle Shoulder Bag/B3629_2.webp",
@@ -38,7 +38,7 @@
     "brand": "Charles",
     "designer": "Eddie",
     "category": "Accessory",
-    "type": "Bag",
+    "tags": "Bag",
     "image":[
         "/product_images/ACCESSORIES/BAG/Olivia Trapeze Shoulder Bag/B2378_1.webp",
         "/product_images/ACCESSORIES/BAG/Olivia Trapeze Shoulder Bag/B2378_2.webp",
@@ -53,7 +53,7 @@
     "brand": "Charles",
     "designer": "Eddie",
     "category": "Accessory",
-    "type": "Jewelry",
+    "tags": "Jewelry",
     "image": [
         "/product_images/ACCESSORIES/JEWELRY/Flower-Embellished Pearl Drop Earrings/E4891_1.webp",
         "/product_images/ACCESSORIES/JEWELRY/Flower-Embellished Pearl Drop Earrings/E4891_2.webp",
@@ -68,7 +68,7 @@
     "brand": "Lady Beauty",
     "designer": "Anna J",
     "category": "Accessory",
-    "type": "Jewelry",
+    "tags": "Jewelry",
     "image": [
         "/product_images/ACCESSORIES/JEWELRY/Gabine Chain-Link Choker Necklace/N2213_1.webp",
         "/product_images/ACCESSORIES/JEWELRY/Gabine Chain-Link Choker Necklace/N2213_2.webp",
@@ -83,7 +83,7 @@
     "brand": "Lady Beauty",
     "designer": "Jack Nguyen",
     "category": "Accessory",
-    "type": "Jewelry",
+    "tags": "Jewelry",
     "image": [
         "/product_images/ACCESSORIES/JEWELRY/Metallic Beaded Necklace/N1123_1.webp",
         "/product_images/ACCESSORIES/JEWELRY/Metallic Beaded Necklace/N1123_2.webp",
@@ -98,7 +98,7 @@
     "brand": "Charles",
     "designer": "Oliver",
     "category": "Accessory",
-    "type": "Sunglasses",
+    "tags": "Sunglasses",
     "image": [
         "/product_images/ACCESSORIES/SUNGLASSES/Braided Wire-Frame Cateye Sunglasses/G7239_1.webp",
         "/product_images/ACCESSORIES/SUNGLASSES/Braided Wire-Frame Cateye Sunglasses/G7239_2.jpg",
@@ -113,7 +113,7 @@
     "brand": "Charles",
     "designer": "Eddie",
     "category": "Accessory",
-    "type": "Sunglasses",
+    "tags": "Sunglasses",
     "image": [
         "/product_images/ACCESSORIES/SUNGLASSES/Geometric Wire-Frame Butterfly Sunglasses/H6439_1.webp",
         "/product_images/ACCESSORIES/SUNGLASSES/Geometric Wire-Frame Butterfly Sunglasses/H6439_2.webp",
@@ -128,7 +128,7 @@
     "brand": "Charles",
     "designer": "Eddie",
     "category": "Accessory",
-    "type": "Sunglasses",
+    "tags": "Sunglasses",
     "image": [
         "/product_images/ACCESSORIES/SUNGLASSES/Two-Tone Wire Frame Butterfly Sunglasses/G5692_1.webp",
         "/product_images/ACCESSORIES/SUNGLASSES/Two-Tone Wire Frame Butterfly Sunglasses/G5692_2.jpg",
@@ -143,7 +143,7 @@
     "brand": "NEM",
     "designer": "Tuan Nguyen",
     "category": "Clothing",
-    "type": "Long dress",
+    "tags": "Long dress",
     "image": [
         "/product_images/AO DAI/ÁO DÀI ĐÁP HOA SEN AD06252/AD06252_1.webp",
         "/product_images/AO DAI/ÁO DÀI ĐÁP HOA SEN AD06252/AD06252_2.webp"
@@ -157,7 +157,7 @@
     "brand": "NEM",
     "designer": "Tuan Nguyen",
     "category": "Clothing",
-    "type": "Long dress",
+    "tags": "Long dress",
     "image": [
         "/product_images/AO DAI/ÁO DÀI HOA AD07562/AD07562_1.webp",
         "/product_images/AO DAI/ÁO DÀI HOA AD07562/AD07562_2.webp"
@@ -171,7 +171,7 @@
     "brand": "NEM",
     "designer": "Tuan Nguyen",
     "category": "Clothing",
-    "type": "Long dress",
+    "tags": "Long dress",
     "image": [
         "/product_images/AO DAI/ÁO DÀI NHUNG ĐÁP HOA SEN AD08802/AD08802_1.webp",
         "/product_images/AO DAI/ÁO DÀI NHUNG ĐÁP HOA SEN AD08802/AD08802_2.webp"
@@ -185,7 +185,7 @@
     "brand": "NEM",
     "designer": "Tuan Nguyen",
     "category": "Clothing",
-    "type": "Long dress",
+    "tags": "Long dress",
     "image": [
         "/product_images/AO DAI/ÁO DÀI NHUNG THÊU HOA KÈM KHĂN AD10252/AD10252_1.webp",
         "/product_images/AO DAI/ÁO DÀI NHUNG THÊU HOA KÈM KHĂN AD10252/AD10252_2.webp"
@@ -199,7 +199,7 @@
     "brand": "NEM",
     "designer": "Tuan Nguyen",
     "category": "Clothing",
-    "type": "Long dress",
+    "tags": "Long dress",
     "image": [
         "/product_images/AO DAI/ÁO DÀI TAY BỒNG AD06292/AD06292_1.webp",
         "/product_images/AO DAI/ÁO DÀI TAY BỒNG AD06292/AD06292_2.webp"
@@ -213,7 +213,7 @@
     "brand": "NEM",
     "designer": "Tuan Nguyen",
     "category": "Clothing",
-    "type": "Long dress",
+    "tags": "Long dress",
     "image": [
         "/product_images/AO DAI/ÁO DÀI THÊU HOA AD06462/AD06462_1.webp",
         "/product_images/AO DAI/ÁO DÀI THÊU HOA AD06462/AD06462_2.webp"
@@ -227,7 +227,7 @@
     "brand": "PT Fashion",
     "designer": "Phong Tran",
     "category": "Clothing",
-    "type": "Casual wear",
+    "tags": "Casual wear",
     "image": [
         "/product_images/PARISIAN LADY/CHÂN VÁY HOA Z09122/Z09122_1.webp",
         "/product_images/PARISIAN LADY/CHÂN VÁY HOA Z09122/Z09122_2.webp"
@@ -241,7 +241,7 @@
     "brand": "PT Fashion",
     "designer": "Phong Tran",
     "category": "Clothing",
-    "type": "Casual wear",
+    "tags": "Casual wear",
     "image": [
         "/product_images/PARISIAN LADY/ĐẦM ĐEN PHỐI HOA CẮT D09342/D09342_1.webp",
         "/product_images/PARISIAN LADY/ĐẦM ĐEN PHỐI HOA CẮT D09342/D09342_2.webp"
@@ -255,7 +255,7 @@
     "brand": "PT Fashion",
     "designer": "Phong Tran",
     "category": "Clothing",
-    "type": "Occasion wear",
+    "tags": "Occasion wear",
     "image": [
         "/product_images/PARISIAN LADY/ĐẦM HOA XANH D09302/D09302_1.webp",
         "/product_images/PARISIAN LADY/ĐẦM HOA XANH D09302/D09302_2.webp"
@@ -269,7 +269,7 @@
     "brand": "PT Fashion",
     "designer": "Phong Tran",
     "category": "Clothing",
-    "type": "Occasion wear",
+    "tags": "Occasion wear",
     "image": [
         "/product_images/PARISIAN LADY/ĐẦM NHUNG ĐỎ D09212/D09212_1.jpg",
         "/product_images/PARISIAN LADY/ĐẦM NHUNG ĐỎ D09212/D09212_2.jpg"
@@ -283,7 +283,7 @@
     "brand": "PT Fashion",
     "designer": "Phong Tran",
     "category": "Clothing",
-    "type": "Occasion wear",
+    "tags": "Occasion wear",
     "image": [
         "/product_images/PARISIAN LADY/ĐẦM TIỆC ĐÍNH NGỌC D09332/D09332_1.webp",
         "/product_images/PARISIAN LADY/ĐẦM TIỆC ĐÍNH NGỌC D09332/D09332_2.webp"
@@ -297,7 +297,7 @@
     "brand": "PT Fashion",
     "designer": "Phong Tran",
     "category": "Clothing",
-    "type": "Formal wear",
+    "tags": "Formal wear",
     "image": [
         "/product_images/PARISIAN LADY/ĐẦM TIỆC TRẮNG D11322/D11322_1.webp",
         "/product_images/PARISIAN LADY/ĐẦM TIỆC TRẮNG D11322/D11322_2.webp"
@@ -311,7 +311,7 @@
     "brand": "Timeless",
     "designer": "Rin Q",
     "category": "Clothing",
-    "type": "Occasion wear",
+    "tags": "Occasion wear",
     "image": [
         "/product_images/STARRY NIGHT/ĐẦM GẤM HOA D06902/D06902_1.jpg",
         "/product_images/STARRY NIGHT/ĐẦM GẤM HOA D06902/D06902_2.jpg"
@@ -325,7 +325,7 @@
     "brand": "Timeless",
     "designer": "Rin Q",
     "category": "Clothing",
-    "type": "Casual wear",
+    "tags": "Casual wear",
     "image": [
         "/product_images/STARRY NIGHT/ĐẦM GẤM HỌA TIẾT D08332/D08332_1.webp",
         "/product_images/STARRY NIGHT/ĐẦM GẤM HỌA TIẾT D08332/D08332_2.webp"
@@ -339,7 +339,7 @@
     "brand": "Timeless",
     "designer": "Rin Q",
     "category": "Clothing",
-    "type": "Casual wear",
+    "tags": "Casual wear",
     "image": [
         "/product_images/STARRY NIGHT/ĐẦM HOA TRẮNG D08342/D08342_1.webp",
         "/product_images/STARRY NIGHT/ĐẦM HOA TRẮNG D08342/D08342_2.webp"
@@ -353,7 +353,7 @@
     "brand": "Timeless",
     "designer": "Rin Q",
     "category": "Clothing",
-    "type": "Formal wear",
+    "tags": "Formal wear",
     "image": [
         "/product_images/STARRY NIGHT/ĐẦM TIỆC THIẾT KẾ D08452/D08452_1.webp",
         "/product_images/STARRY NIGHT/ĐẦM TIỆC THIẾT KẾ D08452/D08452_2.webp"
@@ -367,7 +367,7 @@
     "brand": "Timeless",
     "designer": "Rin Q",
     "category": "Clothing",
-    "type": "Occasion wear",
+    "tags": "Occasion wear",
     "image": [
         "/product_images/STARRY NIGHT/ĐẦM TIỆC XOẮN EO D06012/D06012_1.webp",
         "/product_images/STARRY NIGHT/ĐẦM TIỆC XOẮN EO D06012/D06012_2.webp"
@@ -381,7 +381,7 @@
     "brand": "Timeless",
     "designer": "Rin Q",
     "category": "Clothing",
-    "type": "Occasion wear",
+    "tags": "Occasion wear",
     "image": [
         "/product_images/STARRY NIGHT/ĐẦM TIỆC XOẮN EO D06022/D06022_1.webp",
         "/product_images/STARRY NIGHT/ĐẦM TIỆC XOẮN EO D06022/D06022_2.webp"
@@ -395,7 +395,7 @@
     "brand": "Winnie",
     "designer": "Tram Huynh",
     "category": "Clothing",
-    "type": "Casual wear",
+    "tags": "Casual wear",
     "image": [
         "/product_images/WINTER MEMORIES/ÁO KHOÁC KẺ AK10282/AK10282_1.webp",
         "/product_images/WINTER MEMORIES/ÁO KHOÁC KẺ AK10282/AK10282_2.webp"
@@ -409,7 +409,7 @@
     "brand": "Winnie",
     "designer": "Tram Huynh",
     "category": "Clothing",
-    "type": "Occasion wear",
+    "tags": "Occasion wear",
     "image": [
         "/product_images/WINTER MEMORIES/ĐẦM SUÔNG CỔ NGỌC D11742/D11742_1.webp",
         "/product_images/WINTER MEMORIES/ĐẦM SUÔNG CỔ NGỌC D11742/D11742_2.webp"
@@ -423,7 +423,7 @@
     "brand": "Winnie",
     "designer": "Tram Huynh",
     "category": "Clothing",
-    "type": "Formal wear",
+    "tags": "Formal wear",
     "image": [
         "/product_images/WINTER MEMORIES/ĐẦM TIỆC TRỄ VAI D11912/D11912_1.webp",
         "/product_images/WINTER MEMORIES/ĐẦM TIỆC TRỄ VAI D11912/D11912_2.webp"
@@ -437,7 +437,7 @@
     "brand": "Winnie",
     "designer": "Tram Huynh",
     "category": "Clothing",
-    "type": "Formal wear",
+    "tags": "Formal wear",
     "image": [
         "/product_images/WINTER MEMORIES/ĐẦM TIỆC XANH D11652/D11652_1.webp",
         "/product_images/WINTER MEMORIES/ĐẦM TIỆC XANH D11652/D11652_2.webp"
@@ -451,7 +451,7 @@
     "brand": "Winnie",
     "designer": "Tram Huynh",
     "category": "Clothing",
-    "type": "Occasion wear",
+    "tags": "Occasion wear",
     "image": [
         "/product_images/WINTER MEMORIES/MĂNG TÔ ĐỎ AK09032/AK09032_1.webp",
         "/product_images/WINTER MEMORIES/MĂNG TÔ ĐỎ AK09032/AK09032_2.webp"
@@ -465,7 +465,7 @@
     "brand": "Winnie",
     "designer": "Tram Huynh",
     "category": "Clothing",
-    "type": "Occasion wear",
+    "tags": "Occasion wear",
     "image": [
         "/product_images/WINTER MEMORIES/MĂNG TÔ KÈM ĐAI AK09632/AK09632_1.webp",
         "/product_images/WINTER MEMORIES/MĂNG TÔ KÈM ĐAI AK09632/AK09632_2.webp"

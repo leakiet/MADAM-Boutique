@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-function Details(){
+function Details({ addCart }){
     const {code} = useParams();
     const [product, setProduct] = useState(null);
     
@@ -21,9 +21,8 @@ function Details(){
         fetchData();
       }, []);
     console.log(product);
-    if(!product){
-        return <h1>Loading</h1>
-    }
+    if(!product){return}
+
     return(
         <div className="detailsPage">
             <h1>Product Details</h1>
@@ -35,9 +34,9 @@ function Details(){
                 <p>Price: ${product.price}</p>
                 <p>Brand: {product.brand}</p>
                 <p>Designer: {product.designer}</p>
-                <p>Category: {product.category} - {product.type}</p>
+                <p>Category: {product.category} - {product.tags}</p>
                 <p>Details: {product.detail}</p>
-                <button>Buy now</button>
+                <button onClick={() => addCart(product)}>Buy now</button>
             </div>
         </div>
     );
