@@ -5,6 +5,7 @@ import './css/allCollections.css';
 import './css/homePage.css';
 import './css/detailsPage.css';
 import './css/yourCart.css';
+import './css/loginPage.css';
 
 import ProductList from './components/ProductList';
 import Home from './components/home';
@@ -12,16 +13,21 @@ import Details from './components/Details';
 import Search from './components/Search';
 import CartList from './components/CartList';
 import Login from './components/Login';
-
+import Pagination from './components/Pagination';
 
 function App() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
-  const [filterProduct, setFilterProducts] = useState([]);
+  const [filterProducts, setFilterProducts] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [users, setUsers] = useState([]);
   const [errorLogin, setErrorLogin] = useState('');
   const [carts, setCarts] = useState([]);
+  const [dataAccessory , setDataAccessory] = useState([]);
+  const [dataClothing , setDataClothing] = useState([]);
+
+  const [currentPage , setCurrentPage] = useState(1);
+  const [productPerPage, setProductPerPage] = useState(6);
 
 
   useEffect(() => {
@@ -31,7 +37,12 @@ function App() {
         const productData = await productJson.json();
         setProducts(productData);
         setFilterProducts(productData);
-
+        //Home display Accessory and Clothing
+        const data1 = productData;
+        const data2 = productData;
+        setDataAccessory(data1.filter(p => p.category == "Accessory").slice(2,6));
+        setDataClothing(data2.filter(p => p.category == "Clothing").slice(8,12));
+        //User json
         const userJson = await fetch('./json_file/user.json');
         const usertData = await userJson.json();
         setUsers(usertData);
@@ -42,11 +53,19 @@ function App() {
     fetchData();
   }, []);
 
-  //Search by Name
+  //Get Current Products
+  const indexOfLastProduct = (currentPage * productPerPage);
+  const indexOfFirstProduct = (indexOfLastProduct - productPerPage);
+  const currentProducts = filterProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  //Change Page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  //Search by Type(tags)
   const handleSearch = (value) => {
     setSearchValue(value);
-    const searchedProducts = products.filter(d => d.name.toLowerCase().includes(value.toLowerCase()));
-    setFilterProducts(searchedProducts);
+    setCurrentPage(1);
+    const searchedProducts = products.filter(d => d.tags.toLowerCase().includes(value.toLowerCase()));
+    setFilterProducts(searchedProducts)
   }
 
   const handleAddCarts = (product) => {
@@ -95,10 +114,9 @@ function App() {
   return (
     <div className="App">
         <nav className='nav-bar'>
-          <Link to="/">Home</Link>
+          <Link to="/">Madam Boutique</Link>
           <Link to="/collections">All Collections</Link>
           <Link to="/collections/newCollections">New Collection</Link>
-          <Link to="/collections/onSale">On Sale</Link>
           <Link to="/cart">Your Cart</Link>
           {localStorage.getItem('username') ? (
             <span>
@@ -111,11 +129,13 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={
+            <Home dataAccessory={dataAccessory} dataClothing={dataClothing}/>}/>
           <Route path='/collections' element={
             <div className='allCollections'>
               <Search searchValue={searchValue} onSearch={handleSearch}/> 
-              <ProductList products={filterProduct} addCart={handleAddCarts}/>
+              <ProductList products={currentProducts} addCart={handleAddCarts}/>
+              <Pagination productPerPage={productPerPage} totalProducts={filterProducts.length} paginate={paginate} />
             </div>}/>
           <Route path='/cart' element={
             <CartList carts={carts} deleteCart={handleDeleteCart}/>}/>

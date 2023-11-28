@@ -13,7 +13,7 @@ function Login({ checkLogin, erroLogin }) {
     }
    
     return (
-        <div>
+        <div className="loginPage">
             <form onSubmit={handleLogin} >
                 <h4>{erroLogin}</h4>
                 <h2>Đăng Nhập</h2>
