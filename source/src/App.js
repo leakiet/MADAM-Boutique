@@ -1,19 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
-import './css/nav-bar.css';
-import './css/allCollections.css';
-import './css/homePage.css';
-import './css/detailsPage.css';
-import './css/yourCart.css';
-import './css/loginPage.css';
 
-import ProductList from './components/ProductList';
+import ProductList from './components/Product/ProductList';
 import Home from './components/home';
 import Details from './components/Details';
 import Search from './components/Search';
 import CartList from './components/CartList';
 import Login from './components/Login';
-import Pagination from './components/Pagination';
+import Pagination from './components/Pagination/Pagination';
+import NavBar from './components/NavBar/NavBar';
+import Newsletter from './components/Newsletter/Newsletter';
 
 function App() {
   const navigate = useNavigate();
@@ -27,7 +23,7 @@ function App() {
   const [dataClothing , setDataClothing] = useState([]);
 
   const [currentPage , setCurrentPage] = useState(1);
-  const [productPerPage, setProductPerPage] = useState(6);
+  const [productPerPage, setProductPerPage] = useState(8);
 
 
   useEffect(() => {
@@ -64,7 +60,7 @@ function App() {
   const handleSearch = (value) => {
     setSearchValue(value);
     setCurrentPage(1);
-    const searchedProducts = products.filter(d => d.tags.toLowerCase().includes(value.toLowerCase()));
+    const searchedProducts = (products.filter(d => d.tags.toLowerCase().includes(value.toLowerCase())) || products.filter(n => n.name.toLowerCase().includes(value.toLowerCase())));
     setFilterProducts(searchedProducts)
   }
 
@@ -106,28 +102,9 @@ function App() {
     }
   }
 
-  const deleteLocalStorage = () => {
-    localStorage.clear();
-  }
-
-
   return (
-    <div className="App">
-        <nav className='nav-bar'>
-          <Link to="/">Madam Boutique</Link>
-          <Link to="/collections">All Collections</Link>
-          <Link to="/collections/newCollections">New Collection</Link>
-          <Link to="/cart">Your Cart</Link>
-          {localStorage.getItem('username') ? (
-            <span>
-              Welcome {localStorage.getItem('username')},
-              <Link to="/login" onClick={() => deleteLocalStorage()} className='nav-list_menu'>Logout</Link>
-            </span>
-            ) : (
-              <Link to="/login">Login</Link>
-            )}
-        </nav>
-
+    <div>
+        <NavBar/>
         <Routes>
           <Route path='/' element={
             <Home dataAccessory={dataAccessory} dataClothing={dataClothing}/>}/>
@@ -144,6 +121,7 @@ function App() {
           <Route path='/login' element={
             <Login checkLogin={checkLogin} errorLogin={errorLogin} />}/>
         </Routes>
+        <Newsletter/>
     </div>
   );
 }

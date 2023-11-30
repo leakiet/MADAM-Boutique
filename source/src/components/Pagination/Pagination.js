@@ -1,3 +1,5 @@
+import './Pagination.css'
+
 function Pagination({productPerPage, totalProducts, paginate}){
     const pageNumbers =[];
 
@@ -6,21 +8,18 @@ function Pagination({productPerPage, totalProducts, paginate}){
     }
 
     return (
-        <nav>
+        <div className='paginationCenter'>
             <ul className="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                 {pageNumbers.map(number => (
-                    <li key={number} className="page-item">
-                        <a onClick={() => paginate(number)} className="page-link" href="#">
+                    <li key={number}>
+                        <a onClick={() => paginate(number)} href="#">
                             {number}
                         </a>
                     </li>
                 ))}
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
             </ul>
-        </nav>
+        </div>
     )
-
 }
 
 export default Pagination;

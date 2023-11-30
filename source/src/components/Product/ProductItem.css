@@ -1,0 +1,36 @@
+.item{
+    width: 350px;
+    text-align: center;
+}
+.item p{
+    margin: 6px 0px;
+    text-align: center;
+}
+.item-price{
+    text-align: center;
+    gap: 20px;
+    
+}
+.item-name{
+    color: #515151;
+    font-weight: 600;
+}
+.item:hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+.item button{
+    width: 115px;
+    height: 25px;
+    outline: none;
+    gap: 5px;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+}
+.item button:hover{
+    background: brown;
+}

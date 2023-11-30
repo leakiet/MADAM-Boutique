@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Newsletter from "./Newsletter/Newsletter";
 
 function Home ({dataAccessory , dataClothing}){
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ function Home ({dataAccessory , dataClothing}){
         {dataAccessory.map(pro => (
             <img src={pro.image[0]} alt="image" width="200px" onClick={() => navigate(`/collections/${pro.code}`)} />
         ))}
-        <h3>Clothing</h3>
+        <h3>Feature Items</h3>
         {dataClothing.map(pro => (
             <img src={pro.image[0]} width="200px" onClick={() => navigate(`/collections/${pro.code}`)}/>
         ))}
