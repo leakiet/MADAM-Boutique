@@ -7,13 +7,13 @@
     justify-content: center;
     margin: auto;
     padding: 0px 140px;
-    margin-bottom: 150px;
-    background: linear-gradient(180deg, rgb(255, 228, 179) 0%, #e1ffea22 60%);
+    margin-bottom: 100px;
+    background: linear-gradient(180deg, rgb(255, 216, 198) 0%, #e1ffea22 60%);
     gap: 30px;
 }
 .newsletter h1{
     color: #454545;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
 }
 .newsletter p{

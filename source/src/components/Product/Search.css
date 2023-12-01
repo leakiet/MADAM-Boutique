@@ -1,0 +1,22 @@
+.search{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+.search-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.path{
+    display: flex;
+    justify-content: start;
+    margin-left: 100px;
+    padding-left: 100px;
+    font-size: 18px;
+    font-weight: 540;
+    gap: 10px;
+}
+.banner{
+    padding-bottom: 30px;
+}

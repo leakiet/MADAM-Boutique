@@ -5,7 +5,7 @@ function ProductItem({ product, addCart}){
     const navigate=useNavigate();
     return (
         <div className="item">
-            <img src={product.image[0]} alt="image" width="300px" height="450px" onClick={() => navigate(`/collections/${product.code}`)} />
+            <img src={product.image[0]} alt="image" width="100%" height="500px" onClick={() => navigate(`/collections/${product.code}`)} />
             <div>
                 <p className="item-name">{product.name}</p>
                 <p className="item-price">${product.price}</p>    

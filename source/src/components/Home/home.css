@@ -1,23 +1,27 @@
-.product{
+.home{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-.product h1{
+.home h1{
     color: #171717;
     font-weight: 600;
     font-size: 50px;
 }
-.product hr{
+.home hr{
     width: 200px;
     height: 6px;
     border-radius: 10px;
     background: #252525;
 }
-.product-item{
-    margin-top: 50px;
+.home-item{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
+    padding-bottom: 50px;
+}
+.banner{
+    padding-bottom: 100px;
 }

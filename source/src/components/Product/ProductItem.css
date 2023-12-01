@@ -1,6 +1,11 @@
 .item{
     width: 350px;
     text-align: center;
+    border-radius: 75px;
+    padding-bottom: 50px;
+}
+.item img{
+    border-radius: 75px;
 }
 .item p{
     margin: 6px 0px;
@@ -18,19 +23,21 @@
 .item:hover{
     transform: scale(1.05);
     transition: 0.6s;
+    cursor: pointer;
 }
 .item button{
     width: 115px;
-    height: 25px;
+    height: 35px;
     outline: none;
-    gap: 5px;
+    gap: 10px;
     border: 1px solid #7a7a7a;
     border-radius: 75px;
     color: #515151;
     font-weight: 500;
     background: white;
     cursor: pointer;
+    margin: 5px;
 }
 .item button:hover{
-    background: brown;
+    background: orange;
 }

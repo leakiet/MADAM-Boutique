@@ -20,7 +20,7 @@ const NavBar = () => {
         <ul className="nav-menu">
           <li onClick={()=>{setMenu("all")}}><Link to="/collections">All Collections{menu==="all"?<hr/>:<></>}</Link></li>
           <li onClick={()=>{setMenu("new")}}><Link to="/collections/newCollections">New Collection{menu==="new"?<hr/>:<></>}</Link></li>
-          <li onClick={()=>{setMenu("sale")}}><Link to="/collections/onSale">Chrismas Sale{menu==="sale"?<hr/>:<></>}</Link></li>
+          <li onClick={()=>{setMenu("sale")}}><Link to="/collections/onSale">Christmas Sale{menu==="sale"?<hr/>:<></>}</Link></li>
         </ul>
         <div className="nav-login-cart">
           {localStorage.getItem('username') ? (

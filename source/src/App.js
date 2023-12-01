@@ -1,21 +1,22 @@
 import { useState, useEffect } from 'react';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import ProductList from './components/Product/ProductList';
-import Home from './components/home';
+import Home from './components/Home/home';
 import Details from './components/Details';
-import Search from './components/Search';
+import Search from './components/Product/Search';
 import CartList from './components/CartList';
 import Login from './components/Login';
 import Pagination from './components/Pagination/Pagination';
 import NavBar from './components/NavBar/NavBar';
 import Newsletter from './components/Newsletter/Newsletter';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
+  
   const [users, setUsers] = useState([]);
   const [errorLogin, setErrorLogin] = useState('');
   const [carts, setCarts] = useState([]);
@@ -24,6 +25,10 @@ function App() {
 
   const [currentPage , setCurrentPage] = useState(1);
   const [productPerPage, setProductPerPage] = useState(8);
+
+  const [searchValue, setSearchValue] = useState('');
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
 
 
   useEffect(() => {
@@ -36,8 +41,8 @@ function App() {
         //Home display Accessory and Clothing
         const data1 = productData;
         const data2 = productData;
-        setDataAccessory(data1.filter(p => p.category == "Accessory").slice(2,6));
-        setDataClothing(data2.filter(p => p.category == "Clothing").slice(8,12));
+        setDataAccessory(data1.filter(p => p.category == "Accessory").slice(1,9));
+        setDataClothing(data2.filter(p => p.category == "Clothing").slice(8,16));
         //User json
         const userJson = await fetch('./json_file/user.json');
         const usertData = await userJson.json();
@@ -56,13 +61,30 @@ function App() {
   //Change Page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  //Search by Type(tags)
-  const handleSearch = (value) => {
-    setSearchValue(value);
+  //Search by Tag and by Price
+  
+  const handleMinPriceChange = (event) => {
+    setMinPrice(event.target.value);
+  };
+
+  const handleMaxPriceChange = (event) => {
+    setMaxPrice(event.target.value);
+  };
+  const handleSearch = (event) => {
+    setSearchValue(event.target.value);
+  };
+
+  useEffect(() => {
     setCurrentPage(1);
-    const searchedProducts = (products.filter(d => d.tags.toLowerCase().includes(value.toLowerCase())) || products.filter(n => n.name.toLowerCase().includes(value.toLowerCase())));
-    setFilterProducts(searchedProducts)
-  }
+    const searchedProducts = products.filter(d => {
+      const tagMatch = d.tags.toLowerCase().includes(searchValue.toLowerCase());
+      const priceMatch = 
+        (minPrice === '' || d.price >= parseFloat(minPrice)) &&
+        (maxPrice === '' || d.price <= parseFloat(maxPrice));
+      return tagMatch && priceMatch;
+    })
+    setFilterProducts(searchedProducts);
+  }, [searchValue, minPrice, maxPrice]);
 
   const handleAddCarts = (product) => {
     const currentProduct = carts.find(item => item.id === product.id);
@@ -109,8 +131,8 @@ function App() {
           <Route path='/' element={
             <Home dataAccessory={dataAccessory} dataClothing={dataClothing}/>}/>
           <Route path='/collections' element={
-            <div className='allCollections'>
-              <Search searchValue={searchValue} onSearch={handleSearch}/> 
+            <div>
+              <Search searchValue={searchValue} onSearch={handleSearch} minPrice={minPrice} maxPrice={maxPrice} onMinPrice={handleMinPriceChange} onMaxPrice={handleMaxPriceChange}/>
               <ProductList products={currentProducts} addCart={handleAddCarts}/>
               <Pagination productPerPage={productPerPage} totalProducts={filterProducts.length} paginate={paginate} />
             </div>}/>
@@ -122,6 +144,7 @@ function App() {
             <Login checkLogin={checkLogin} errorLogin={errorLogin} />}/>
         </Routes>
         <Newsletter/>
+        <Footer/>
     </div>
   );
 }
