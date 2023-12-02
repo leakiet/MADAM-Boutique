@@ -1,13 +1,16 @@
 import './Search.css'
+import './ProductList.css'
 import Banner1 from '../Assets/Banner1.jpg'
 
 function Search({value, onSearch, minPrice, maxPrice, onMinPrice, onMaxPrice}){
     return(
         <div>
             <img className='banner' src={Banner1} alt="BannerProduct" width="100%"/>
-            <div className='path'><span>HOME /</span><span>ALL COLLECTIONS</span></div>
+            <div className="path">
+                <span>HOME / </span><span>All Collections</span>
+            </div>
             <div className="product">
-            <h1>ALL COLLECTIONS</h1>
+            <h1>ALL COLLECTIONS</h1> 
             <hr/>
                 <div className='search'>
                     <select type="text" class="form-select" aria-label="Default select example" value={value} onChange={onSearch}>

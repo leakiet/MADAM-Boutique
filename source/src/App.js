@@ -3,13 +3,12 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import ProductList from './components/Product/ProductList';
 import Home from './components/Home/home';
-import Details from './components/Details';
+import Details from './components/ProductDetails/Details';
 import Search from './components/Product/Search';
 import CartList from './components/CartList';
-import Login from './components/Login';
+import Login from './components/Login/Login';
 import Pagination from './components/Pagination/Pagination';
 import NavBar from './components/NavBar/NavBar';
-import Newsletter from './components/Newsletter/Newsletter';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -94,6 +93,7 @@ function App() {
       setCarts(updatedCart);
       } else { //thêm vào giỏ hàng với số lượng là 1
         setCarts([...carts, { ...product, quantity: 1 }]);}
+      alert('Succesully add to cart')
     }
   // Xóa sản phẩm khỏi giỏ hàng
   const handleDeleteCart = (id) => {
@@ -143,7 +143,6 @@ function App() {
           <Route path='/login' element={
             <Login checkLogin={checkLogin} errorLogin={errorLogin} />}/>
         </Routes>
-        <Newsletter/>
         <Footer/>
     </div>
   );

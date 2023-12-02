@@ -1,7 +1,7 @@
 .navBar{
     display: flex;
     justify-content: space-around;
-    padding: 16px;
+    padding: 5px;
     box-shadow: 0 1px 3px -2px black;
 }
 .nav-logo{
@@ -12,7 +12,7 @@
 .nav-logo p{
     color: black;
     font-weight: 600;
-    font-size: 38px;
+    font-size: 32px;
 }
 .nav-menu{
     display: flex;
@@ -46,9 +46,9 @@
     gap: 45px;
 }
 .nav-login-cart button{
-    width: 135px;
-    height: 45px;
-    outline: non;
+    width: 125px;
+    height: 40px;
+    outline: none;
     border: 1px solid #7a7a7a;
     border-radius: 75px;
     color: #515151;
@@ -75,24 +75,9 @@
 }
 
 
-/* unvisited link */
-a:link {
-    color: #626262;
-}
-
-/* visited link */
-a:visited {
-    color: #626262;
-}
-
 /* mouse over link */
 a:hover {
     color: orange;
-}
-
-/* selected link */
-a:active {
-    color: #626262;
 }
 /* Remove underline from Link*/
 a {

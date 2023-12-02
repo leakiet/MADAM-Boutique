@@ -1,0 +1,101 @@
+.details{
+    display: flex;
+    margin: 0px 175px;
+}
+.details-left{
+    display: flex;
+    gap: 5px;
+}
+.details-img-list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.details-img-list img{
+    height: 400px;
+    cursor: pointer;
+}
+.details-main-img{
+    height: 805px;
+}
+.paths{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5e5e5e;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 30px 175px;
+    text-transform: capitalize;
+}
+.details-right{
+    margin: 0px 75px ;
+    display: flex;
+    flex-direction: column;
+}
+.details-right h1{
+    color: #3d3d3d;
+    font-size: 40px;
+    font-weight: 700;
+}
+.details-right-star{
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+    gap: 5px;
+    color: #1c1c1c;
+    font-size: 16px;
+}
+.details-right-price{
+    display: flex;
+    margin: 40px 0px;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.details-right-price-old{
+    color: #818181;
+    text-decoration: line-through;
+}
+.details-right-description{
+    font-size: 18px;
+    font-weight: 500;
+}
+.details-right-size h1{
+    margin-top: 55px;
+    color: #656565;
+    font-size: 20px;
+    font-weight: 600;
+}
+.details-right-sizes{
+    display: flex;
+    margin: 30px 0px;
+    gap: 20px;
+}
+.details-right-sizes div{
+    padding: 18px 24px;
+    background: whitesmoke;
+    border: 1px solid #ebebeb;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.details-right button{
+    padding: 20px 40px;
+    width: 220px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: #FF4141;
+    margin-bottom: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.details-right-category{
+    font-size: 18px;
+    margin: 10px;
+}
+.details-right-category span{
+    font-weight: 600;
+}
+
