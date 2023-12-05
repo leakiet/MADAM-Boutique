@@ -123,6 +123,9 @@ function App() {
       setErrorLogin('Invalid username or password');
     }
   }
+  // const handleRefresh = () => {
+  //   window.location.reload();
+  // }
 
   return (
     <div>
@@ -139,11 +142,13 @@ function App() {
           <Route path='/cart' element={
             <CartList carts={carts} deleteCart={handleDeleteCart}/>}/>
           <Route path ="/collections/:code" element={
-            <Details addCart={handleAddCarts}/>}/>
+            <div>
+            <Details addCart={handleAddCarts}/>
+            </div>
+            }/>
           <Route path='/login' element={
             <Login checkLogin={checkLogin} errorLogin={errorLogin} />}/>
         </Routes>
-        <Footer/>
     </div>
   );
 }

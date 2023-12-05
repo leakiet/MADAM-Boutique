@@ -17,7 +17,7 @@ function CartList({ carts, deleteCart }) {
                     </tr>
                 </thead>
                 {carts.map(c => (
-                <CartItem key={c.id} product={c} deleteCart={deleteCart} />
+                <CartItem key={c.code} product={c} deleteCart={deleteCart} />
                 ))}
                 </table>
             </div>

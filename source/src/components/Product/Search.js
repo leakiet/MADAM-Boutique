@@ -13,7 +13,7 @@ function Search({value, onSearch, minPrice, maxPrice, onMinPrice, onMaxPrice}){
             <h1>ALL COLLECTIONS</h1> 
             <hr/>
                 <div className='search'>
-                    <select type="text" class="form-select" aria-label="Default select example" value={value} onChange={onSearch}>
+                    <select type="text" value={value} onChange={onSearch}>
                         <option value="">All Products</option>
                         <option value="Bag">Bag</option>
                         <option value="Jewelry">Jewelry</option>
@@ -27,7 +27,7 @@ function Search({value, onSearch, minPrice, maxPrice, onMinPrice, onMaxPrice}){
                     {/* <input type="number" placeholder="Min price" value={minPrice} onChange={onMinPrice}/>
                     <input type="number" placeholder="Max price" value={maxPrice} onChange={onMaxPrice}/> */}
                 
-                    <select class="form-select" aria-label="Default select example" type="number" placeholder="Min price" value={minPrice} onChange={onMinPrice}>
+                    <select type="number" placeholder="Min price" value={minPrice} onChange={onMinPrice}>
                         <option value="">Price From</option>
                         <option value="0">0</option>
                         <option value="50">50</option>
@@ -35,7 +35,7 @@ function Search({value, onSearch, minPrice, maxPrice, onMinPrice, onMaxPrice}){
                         <option value="150">150</option>
                     </select>
 
-                    <select class="form-select" aria-label="Default select example" type="number" placeholder="Max price" value={maxPrice} onChange={onMaxPrice}>
+                    <select type="number" placeholder="Max price" value={maxPrice} onChange={onMaxPrice}>
                         <option value="">Price To</option>
                         <option value="50">50</option>
                         <option value="100">100</option>
