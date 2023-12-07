@@ -41,14 +41,17 @@
 .details-right-star{
     display: flex;
     align-items: center;
-    margin-top: 13px;
+    margin-top: 5px;
     gap: 5px;
     color: #1c1c1c;
     font-size: 16px;
 }
+.star{
+    width: 20px;
+}
 .details-right-price{
     display: flex;
-    margin: 40px 0px;
+    margin: 20px 0px;
     gap: 10px;
     font-size: 28px;
     font-weight: 700;
@@ -62,18 +65,18 @@
     font-weight: 500;
 }
 .details-right-size h1{
-    margin-top: 55px;
+    margin-top: 30px;
     color: #656565;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
 }
 .details-right-sizes{
     display: flex;
-    margin: 30px 0px;
+    margin: 20px 0px;
     gap: 20px;
 }
 .details-right-sizes div{
-    padding: 18px 24px;
+    padding: 16px 20px;
     background: whitesmoke;
     border: 1px solid #ebebeb;
     border-radius: 100%;
@@ -86,7 +89,7 @@
     font-weight: 600;
     color: white;
     background: #FF4141;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     border: none;
     outline: none;
     cursor: pointer;

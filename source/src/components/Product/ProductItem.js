@@ -1,24 +1,25 @@
 import { useNavigate } from "react-router-dom";
 import './ProductItem.css';
+import X_icon from '../Assets/x-lg.svg'
 
-function ProductItem({ product, addCart}) {
+function ProductItem({ product, addCart }) {
     const navigate = useNavigate();
-    const handleProductClick = (code) => {
+    const handleProductClick = (id) => {
         // Navigate to the product page using the code
-        navigate(`/collections/${code}`);
+        navigate(`/collections/${id}`);
         // Reload the page after navigation
         window.location.reload();
         // Scroll to the top of the page after navigation
-        window.scrollTo({ top: 0, behavior: 'auto' });
+        window.scrollTo(0,0);
     }
     return (
         <div className="item">
-            <img src={product.image[0]} alt="image" width="100%" height="500px" onClick={() => handleProductClick(product.code)} />
+            <img src={product.image[0]} alt="image" width="80%" onClick={() => handleProductClick(product.id)} />
             <div>
                 <p className="item-name">{product.name}</p>
                 <p className="item-price">${product.price}</p>    
-                <button onClick={() => addCart(product)}>Buy now</button>
-                <button onClick={() => handleProductClick(product.code)} >View Details</button>
+                <button onClick={() => addCart(product)}>Add Cart</button>
+                <button onClick={() => handleProductClick(product.id)} >View Details</button>
             </div>
         </div>
     );
