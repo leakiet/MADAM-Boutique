@@ -1,22 +1,22 @@
-.product{
+.new{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     margin: 0px 175px;
 }
-.product h1{
+.new h1{
     color: #171717;
     font-weight: 600;
     font-size: 50px;
 }
-.product hr{
+.new hr{
     width: 200px;
     height: 6px;
     border-radius: 10px;
     background: #252525;
 }
-.product-item{
+.new-item{
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

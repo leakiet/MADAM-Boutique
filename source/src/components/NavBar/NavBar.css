@@ -1,7 +1,6 @@
 .navBar{
     display: flex;
     justify-content: space-around;
-    padding: 5px;
     box-shadow: 0 1px 3px -2px black;
 }
 .nav-logo{
@@ -12,15 +11,15 @@
 .nav-logo p{
     color: black;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 28px;
 }
 .nav-menu{
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 50px;
+    gap: 40px;
     color: #626262;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 
 }
@@ -29,7 +28,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 10px;
     cursor: pointer;
 }
 .nav-menu hr{
@@ -40,26 +39,28 @@
     background: red;
 
 }
+.nav-menu-collections{
+    
+}
+.nav-menu button{
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    color: #626262;
+    font-size: 18px;
+    font-weight: 500;
+
+}
 .nav-login-cart {
     display: flex;
     align-items: center;
     gap: 45px;
-}
-.nav-login-cart button{
-    width: 125px;
-    height: 40px;
-    outline: none;
-    border: 1px solid #7a7a7a;
-    border-radius: 75px;
-    color: #515151;
-    font-size: 20px;
-    font-weight: 500;
-    background: white;
     cursor: pointer;
 }
-.nav-login-cart button:active{
-    background: orange;
-}
+
 .nav-cart-count{
     width: 22px;
     height: 22px;
@@ -70,10 +71,84 @@
     margin-left: -55px;
     border-radius: 11px;
     font-size: 14px;
-    background: red;
+    background: orangered;
     color: white;
 }
 
+.account-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 8%;
+    top: 9%;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 100%, 0.5); /* Set the background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow for a card-like effect */
+    z-index: 1; 
+    padding: 10px;
+    cursor: pointer;
+}
+.carts-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    right:1%;
+    top: 11%;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 100%, 0.301); /* Set the background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow for a card-like effect */
+    z-index: 1; 
+    padding: 10px;
+    cursor: pointer;
+}
+.collections-links{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 42.5%;
+    top: 8%;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 100%, 0.301); /* Set the background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow for a card-like effect */
+    z-index: 1; 
+    padding: 10px;
+    cursor: pointer;
+}
+.collections-links li{
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    right: 7%;
+    top: 9%;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 100%, 0.301); /* Set the background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow for a card-like effect */
+    z-index: 1; 
+    padding: 10px;
+    cursor: pointer;
+}
+.search-links input{
+    width: 150px;
+    height: 35px;
+    border: none;
+    padding: 5px;
+}
+.search-links img{
+    background: hsla(0, 0%, 100%, 0.301); 
+}
+
+.account-links a {
+  font-size: 16px;
+  margin: 7px;
+  color: #626262;
+}
 
 /* mouse over link */
 a:hover {
@@ -81,6 +156,6 @@ a:hover {
 }
 /* Remove underline from Link*/
 a {
-   text-decoration:none;
+   text-decoration: none;
    color: #626262;
 }

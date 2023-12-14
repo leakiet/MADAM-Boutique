@@ -2,9 +2,9 @@
     margin: 100px 170px;  
 }
 .cartlist hr{
-    height: 3px;
-    background: #e2e2e2;
-    border: 0;
+    height: 1px;
+    background: red;
+    border: none;
 }
 .cartlist-main{
     display: grid;
@@ -17,8 +17,11 @@
     font-weight: 600;
 }
 .cartItem-format{
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
+}
+.cartItem-format li{
+    list-style: none;
 }
 .cartItem-product-icon{
     height: 62px;
@@ -33,11 +36,13 @@
     height: 18px;
     background: #ffffff;
 }
+
 .cartItem-quantity button{
     border: none;
-    font-size: 16px;
+    background: none;
+    font-size: 18px;
     font-weight: 500;
-}
+}  
 .cartlist-down{
     display: flex;
     margin: 100px 0px;
@@ -53,6 +58,9 @@
     display: flex;
     justify-content: space-between;
     padding: 15px 0px;
+}
+.cartlist-discount{
+    color: #ff5a5a;
 }
 .cartlist-total button{
     width: 262px;
@@ -74,7 +82,7 @@
     color: #555;
 }
 .cartlist-promobox{
-    width: 504px;
+    width: 488px;
     margin-top: 15px;
     padding-left: 20px;
     height: 58px;
@@ -85,7 +93,7 @@
     outline: none;
     background: transparent;
     font-size: 16px;
-    width: 330px;
+    width: 313px;
     height: 50px;
 }
 .cartlist-promobox button{

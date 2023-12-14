@@ -4,11 +4,9 @@ import NextArrows from "../Assets/arrow-right.svg";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useNavigate } from 'react-router-dom';
 import ProductItem from '../Product/ProductItem';
 
-function RelatedProducts({ relatedProducts, addCart }) {
-  if (!relatedProducts) return null;
+function RelatedProducts({ relatedProducts, addCart, addCompare }) {
 
   // const CustomPrevArrow = (props) => (
   //   <div {...props} className="custom-arrows custom-prev-arrows" >
@@ -40,8 +38,8 @@ const settings = {
       </div>
       <div className='relatedproducts-items-container'>
       <Slider {...settings} className='relatedproducts-items'>
-        {relatedProducts.map(p => (
-          <ProductItem key={p.id} product={p} addCart={addCart}/>
+        {relatedProducts.map((p,i) => (
+          <ProductItem key={i} product={p} addCart={addCart} addCompare={addCompare}/>
         ))}
       </Slider>
       </div>

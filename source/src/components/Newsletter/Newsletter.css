@@ -1,16 +1,14 @@
 .newsletter{
-    width: 65%;
-    height: 40vh;
+    width: 80%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
-    padding: 0px 140px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    background: linear-gradient(180deg, rgb(255, 216, 198) 0%, #e1ffea22 60%);
-    gap: 30px;
+    margin-top: 80px;
+    background: linear-gradient(180deg, rgb(255, 216, 198) 0%, #f5ffe1 60%);
+    gap: 10px;
 }
 .newsletter h1{
     color: #454545;
@@ -21,17 +19,17 @@
     color: #454545;
     font-size: 20px;
 }
-.newsletter div{
+.newsletter form{
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: white;
-    width: 730px;
-    height: 70px;
+    width: 500px;
+    height: 60px;
     border-radius: 80px;
     border: 1px solid #e3e3e3;
 }
-.newsletter input{
+.newsletter form input{
     width: 500px;
     margin-left: 30px;
     border: none;
@@ -39,11 +37,12 @@
     color: #616161;
     font-size: 16px;
 }
-.newsletter div button{
+.newsletter form button{
     width: 210px;
-    height: 70px;
+    height: 60px;
     border-radius: 80px;
     background: black;
     color: white;
     font-size: 16px;
+    cursor: pointer;
 }

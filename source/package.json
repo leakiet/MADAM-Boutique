@@ -10,6 +10,7 @@
     "bootstrap-icons": "^1.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-input-mask": "^2.0.4",
     "react-multi-select-component": "^4.3.4",
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.20.0",

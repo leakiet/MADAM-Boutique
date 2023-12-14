@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import ProductItem from "../Product/ProductItem";
 import './home.css';
-import Newsletter from "../Newsletter/Newsletter";
 
 import prevarrows from "../Assets/arrow-left.svg";
 import nextarrows from "../Assets/arrow-right.svg";
@@ -64,6 +63,12 @@ function Home ({dataAccessory , dataClothing, addCart}){
                         <ProductItem key={p.id} product={p} addCart={addCart}/>
                     ))}
                 </div>
+            </div>
+            <div>
+                Poster
+            </div>
+            <div>
+                BLOG
             </div>
         </div>
     );

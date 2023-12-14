@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding-top: 50px;
+    margin: 0px 175px;
 }
 .home h1{
     color: #171717;
@@ -17,7 +17,7 @@
     background: #252525;
 }
 .home-item{
-    margin-top: 20px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;

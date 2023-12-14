@@ -1,26 +1,46 @@
 import { useNavigate } from "react-router-dom";
 import './ProductItem.css';
-import X_icon from '../Assets/x-lg.svg'
+import { useState } from "react";
+import cart_icon from "../Assets/cart-plus.svg"
 
 function ProductItem({ product, addCart }) {
+    const [showIcon, setShowIcon] = useState(false);
+    const [showCart, setShowCart] = useState(false);
     const navigate = useNavigate();
+    
     const handleProductClick = (id) => {
-        // Navigate to the product page using the code
         navigate(`/collections/${id}`);
-        // Reload the page after navigation
-        window.location.reload();
-        // Scroll to the top of the page after navigation
-        window.scrollTo(0,0);
+        // window.location.reload();
+        window.scrollTo({top: 0});
     }
+
+    const toggleAddCart = () => {
+        setShowCart(true)
+    }
+
+
     return (
         <div className="item">
-            <img src={product.image[0]} alt="image" width="80%" onClick={() => handleProductClick(product.id)} />
+            <div className="container-item"
+              onMouseEnter={() => setShowIcon(true)}
+              onMouseLeave={() => setShowIcon(false)}
+            >
+            <img src={product.image[0]} alt={product.name} width="100%" onClick={() => handleProductClick(product.id)}/>
+            {showIcon && (
+                <div className="icon-overlay">
+                    <img src={cart_icon} alt="carticon" onClick={() =>{toggleAddCart() ; addCart(product)}}/>
+                </div>
+            )}
+            {showCart && (
+                <div className="carts-overlay">Item added to Cart</div>
+            )}
+            </div>
+
             <div>
                 <p className="item-name">{product.name}</p>
-                <p className="item-price">${product.price}</p>    
-                <button onClick={() => addCart(product)}>Add Cart</button>
-                <button onClick={() => handleProductClick(product.id)} >View Details</button>
+                <p className="item-price"><span className="item-price-old">{product.price_old} </span>${product.price}</p>
             </div>
+            
         </div>
     );
 }

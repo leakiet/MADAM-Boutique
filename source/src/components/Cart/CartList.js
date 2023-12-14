@@ -1,15 +1,40 @@
 import { useEffect, useState } from "react";
 import CartItem from "./CartItem";
 import './CartItem.css'
+import { useNavigate } from "react-router-dom";
 
-function CartList({ carts, deleteCart, onQuantityChange }) {
+function CartList({ carts, deleteCart, onQuantityChange, checkLoginStatus }) {
 
-    const calculateTotalPrice = (carts) => {
+    const [discountPrice ,setDiscountPrice] = useState(0);
+    const [promotionCode, setPromotionCode] = useState('');
+
+    const calculateTotalPrice = (cartsz) => {
         let totalPrice = 0;
-        for (const product of carts) {
+        for (const product of cartsz) {
           totalPrice += product.price * product.quantity;
         }
         return totalPrice;
+      };
+
+    const handlePromotion = (e) => {
+        e.preventDefault();
+        if (promotionCode == "MADAM2023"){
+            alert('Promotion code was applied')
+            setDiscountPrice(10)
+            setPromotionCode('')
+        } else if (promotionCode == "XMAS2023"){
+            alert('Promotion code was applied')
+            setDiscountPrice(50)
+            setPromotionCode('')
+        } else {
+            alert('Invalid Promotion code')
+        }
+    };
+
+    const finalTotalPrice = () => {
+        const subtotal = calculateTotalPrice(carts);
+        const discountedTotal = subtotal - discountPrice;
+        return discountedTotal >= 0 ? discountedTotal : 0;
       };
 
     return (
@@ -24,7 +49,7 @@ function CartList({ carts, deleteCart, onQuantityChange }) {
                 </div>
                 <hr />
                 {carts.map(c => (
-                <CartItem key={c.code} product={c} deleteCart={deleteCart} onQuantityChange={onQuantityChange} />
+                <CartItem key={c.id} product={c} deleteCart={deleteCart} onQuantityChange={onQuantityChange} />
                 ))}
 
                 <div className="cartlist-down">
@@ -37,23 +62,23 @@ function CartList({ carts, deleteCart, onQuantityChange }) {
                             </div>
                             <hr/>
                             <div className="cartlist-total-item">
-                                <p>Shipping Fee</p>
-                                <p>Free</p>
+                                <p>Discount</p>
+                                <p className="cartlist-discount">-${discountPrice}</p>
                             </div>
                             <hr/>
                             <div className="cartlist-total-item">
                                 <h3>Total</h3>
-                                <h3>${calculateTotalPrice(carts)}</h3>
+                                <h3>${finalTotalPrice()}</h3>
                             </div>
                         </div>
-                        <button>PROCEED TO CHECKOUT</button>
+                            <button onClick={checkLoginStatus}>PROCEED TO CHECKOUT</button>
                     </div>
                     <div className="cartlist-promocode">
-                        <p>If you haave a promo code, Enter it here</p>
-                        <div className="cartlist-promobox">
-                            <input type="text" placeholder="Promo Code" />
+                        <p>If you have a promo code, Enter it here</p>
+                        <form className="cartlist-promobox" onSubmit={handlePromotion}>
+                            <input id="Promotion" onChange={(e)=>setPromotionCode(e.target.value)} value={promotionCode} type="text" placeholder="Promotion Code" />
                             <button>Submit</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
