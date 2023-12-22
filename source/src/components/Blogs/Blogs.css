@@ -1,0 +1,127 @@
+.Blogs {
+    color: #626262;
+}
+.Blogs hr{
+    border: none;
+    height: 1px;
+    background: #62626257;
+}
+
+.Blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 50px 400px;
+}
+
+.Blog-content hr{
+    border: none;
+    height: 1px;
+    background: #626262;
+    width: 100%;
+}
+
+.Blog-content h2{
+    font-size: 30px;
+}
+.Blog-content h4{
+    font-size: 18px;
+    margin: 0px;
+}
+.Blog-content p{
+    font-size: 18px;
+}
+.Blog-content img{
+    width: 600px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.path {
+    padding: 10px 0;
+}
+.home-blogs{
+    text-align: center;
+    padding: 10px;
+}
+@media only screen and (max-width: 1320px){ 
+    .Blog-content{
+        padding: 50px 300px;
+    }
+    
+    .Blog-content h2{
+        font-size: 30px;
+    }
+    .Blog-content h4{
+        font-size: 18px;
+    }
+    .Blog-content p{
+        font-size: 18px;
+    }
+    .Blog-content img{
+        width: 500px;
+    }
+}
+@media only screen and (max-width: 1090px){ 
+    .Blog-content{
+        padding: 40px 200px;
+    }
+    
+    .Blog-content h2{
+        font-size: 28px;
+    }
+    .Blog-content h4{
+        font-size: 17px;
+    }
+    .Blog-content p{
+        font-size: 17px;
+    }
+    .Blog-content img{
+        width: 430px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .home-blogs img{
+        width: 400px;
+    }
+    .Blog-content{
+        padding: 30px 100px;
+    }
+    
+    .Blog-content h2{
+        font-size: 26px;
+    }
+    .Blog-content h4{
+        font-size: 16px;
+    }
+    .Blog-content p{
+        font-size: 16px;
+    }
+    .Blog-content img{
+        width: 350px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .home-blogs img{
+        width: 350px;
+    }
+    .Blog-content{
+        padding: 20px 50px;
+    }
+    
+    .Blog-content h2{
+        font-size: 25px;
+    }
+    .Blog-content h4{
+        font-size: 15px;
+    }
+    .Blog-content p{
+        font-size: 15px;
+    }
+    .Blog-content img{
+        width: 300px;
+    }
+}
+
+

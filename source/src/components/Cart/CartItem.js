@@ -9,10 +9,10 @@ function CartItem({ product, deleteCart, onQuantityChange }){
                 <li>${product.price}</li>
                 <li className="cartItem-quantity">
                     <button onClick={() => onQuantityChange('decrement', product.id)}>-</button>
-                    <button >{product.quantity}</button>
+                    <div>{product.quantity}</div>
                     <button onClick={() => onQuantityChange('increment', product.id)}>+</button>
                 </li>
-                <li>{product.price*product.quantity}</li>               
+                <li>${product.price*product.quantity}</li>               
                 <li><img src={X_icon} alt="x_icon" className='cartItem-remove-icon' onClick={()=>{deleteCart(product.id)}}/></li>
         </ul>
     )

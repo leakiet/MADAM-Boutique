@@ -2,16 +2,17 @@ import './Search.css'
 import './ProductList.css'
 import BannerProduct from '../Assets/Banner3.webp'
 
-function Search({value, onSearch, minPrice, maxPrice, onMinPrice, onMaxPrice}){
-    return(
+function Search({ value, onSearch, minPrice, maxPrice, onMinPrice, onMaxPrice }) {
+
+    return (
         <div>
-            <img className='banner' src={BannerProduct} alt="BannerProduct" width="100%"/>
+            <img className='banner' src={BannerProduct} alt="BannerProduct" width="100%" />
             <div className="path">
                 <span>HOME / </span><span>All Collections</span>
             </div>
             <div className="product">
-            <h1>ALL COLLECTIONS</h1> 
-            <hr/>
+                <h1>ALL COLLECTIONS</h1>
+                <hr />
                 <div className='search'>
                     <select type="text" value={value} onChange={onSearch}>
                         <option value="">All Products</option>
@@ -26,9 +27,9 @@ function Search({value, onSearch, minPrice, maxPrice, onMinPrice, onMaxPrice}){
 
                     {/* <input type="number" placeholder="Min price" value={minPrice} onChange={onMinPrice}/>
                     <input type="number" placeholder="Max price" value={maxPrice} onChange={onMaxPrice}/> */}
-                
+
                     <select type="number" placeholder="Min price" value={minPrice} onChange={onMinPrice}>
-                        <option value="">Price From</option>
+                        <option value="1">Price From</option>
                         <option value="0">0</option>
                         <option value="50">50</option>
                         <option value="100">100</option>
@@ -36,7 +37,7 @@ function Search({value, onSearch, minPrice, maxPrice, onMinPrice, onMaxPrice}){
                     </select>
 
                     <select type="number" placeholder="Max price" value={maxPrice} onChange={onMaxPrice}>
-                        <option value="">Price To</option>
+                        <option value="199">Price To</option>
                         <option value="50">50</option>
                         <option value="100">100</option>
                         <option value="150">150</option>

@@ -26,19 +26,121 @@
 } 
 
 .relatedproducts-items{
-    width: 100%;
-    gap: 20px;
+    width: 1350px;
 }
-.custom-arrows {
+
+.custom-arrows1 {
   cursor: pointer;
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
   z-index: 1000;
 }
-.custom-prev-arrows{
-    left: 0px;
+.custom-prev-arrows1{
+    left: 10px;
 }
-.custom-next-arrows{
-    right: 20px;
+.custom-next-arrows1{
+    right: 10px;
 }
+.relatedproducts-items-show{
+    margin: 10px;
+}
+
+@media only screen and (max-width: 1320px){
+    .relatedproducts{
+        gap: 10px;
+        padding: 40px 0px;
+    }
+    .relatedproducts-items-container{
+        gap: 15px;
+        margin: 0px 130px;
+    }
+    
+    .relatedproducts h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .relatedproducts hr{
+        width: 180px;
+        height: 5px;
+        border-radius: 8px;
+    } 
+    
+    .relatedproducts-items{
+        width: 1050px;
+    }
+}
+
+@media only screen and (max-width: 1090px){
+    .relatedproducts{
+        gap: 5px;
+        padding: 30px 0px;
+    }
+    .relatedproducts-items-container{
+        gap: 10px;
+        margin: 0px 100px;
+    }
+    
+    .relatedproducts h1{
+        font-size: 36px;
+        text-align: center;
+    }
+    .relatedproducts hr{
+        width: 150px;
+        height: 3px;
+        border-radius: 5px;
+    } 
+    
+    .relatedproducts-items{
+        width: 780px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .relatedproducts{
+        gap: 5px;
+        padding: 20px 0px;
+    }
+    .relatedproducts-items-container{
+        gap: 5px;
+        margin: 0px 70px;
+    }
+    
+    .relatedproducts h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .relatedproducts hr{
+        width: 120px;
+        height: 2px;
+        border-radius: 3px;
+    } 
+    
+    .relatedproducts-items{
+        width: 530px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .relatedproducts{
+        gap: 5px;
+        padding: 20px 0px;
+    }
+    .relatedproducts-items-container{
+        gap: 5px;
+        margin: 0px 50px;
+    }
+    
+    .relatedproducts h1{
+        font-size: 28px;
+        text-align: center;
+    }
+    .relatedproducts hr{
+        width: 100px;
+        height: 2px;
+        border-radius: 3px;
+    } 
+    
+    .relatedproducts-items{
+        width: 270px;
+    }
+}
+

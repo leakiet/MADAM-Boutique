@@ -1,32 +1,87 @@
-.search{
+.search {
     display: flex;
     justify-content: space-around;
     justify-items: center;
 }
-.search select{
-    text-align: left;
+
+select {
+    padding: 10px;
+    font-size: 16px;
     border: none;
-    gap: 10px;
-    margin: 10px;
-    cursor: pointer;
-    color: #5e5e5e;
+    background-color: #fff;
+    color: #333;
 }
 
-.search-box{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+select option {
+    background-color: #fff;
+    color: #333;
 }
-.path{
+
+select option:hover {
+    background-color: #ddd;
+}
+
+select option:checked {
+    background-color: #a8d2ff;
+    color: #0066cc;
+}
+
+.path {
     display: flex;
     align-items: center;
     gap: 8px;
     color: #5e5e5e;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    margin: 0px 175px;
+    margin: 0px 75px;
     text-transform: capitalize;
 }
-.banner{
-    padding-bottom: 30px;
+
+.banner {
+    padding-bottom: 20px;
+}
+@media only screen and (max-width: 1090px){
+    select {
+        padding: 18px;
+        font-size: 15px;
+    }
+    
+    .path {
+        font-size: 17px;
+        margin: 0px 65px;
+    }
+
+    .banner {
+        padding-bottom: 15px;
+    }
+}
+@media only screen and (max-width: 800px){
+    select {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .path {
+        font-size: 16px;
+        margin: 0px 50px;
+    }
+    
+    .banner {
+        padding-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 600px){
+    select {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .path {
+        font-size: 14px;
+        margin: 0px 30px;
+    }
+    
+    .banner {
+        padding-bottom: 8px;
+    }
 }

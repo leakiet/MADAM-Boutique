@@ -1,6 +1,6 @@
 import './Pagination.css'
 
-function Pagination({productPerPage, totalProducts, paginate}){
+function Pagination({productPerPage, totalProducts, paginate, currentPage}){
     const pageNumbers =[];
 
     for(let i=1 ; i<= Math.ceil(totalProducts / productPerPage); i++){
@@ -9,15 +9,15 @@ function Pagination({productPerPage, totalProducts, paginate}){
 
     return (
         <div className='paginationCenter'>
-            <ul className="pagination">
+            <div className="pagination">
                 {pageNumbers.map(number => (
-                    <li key={number}>
-                        <a onClick={() => paginate(number)} href="#">
+                    <div key={number} className={`pagination-number ${currentPage === number ? 'active' : ''}`}>
+                        <div onClick={() => paginate(number)}>
                             {number}
-                        </a>
-                    </li>
+                        </div>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }

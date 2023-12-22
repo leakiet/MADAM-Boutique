@@ -1,0 +1,48 @@
+.related-icon-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Black see-through */
+    width: 90%;
+    height: 20%;
+    transition: 1s ease;
+    opacity:1;
+}
+.related-icon-overlay img{
+    width: 60px;
+    color: #535353;
+}
+.related-icon-overlay span{
+    font-size: 18px;
+    color: #d84646;
+}
+.related-carts-overlay{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.51);
+    font-size: 24px;
+    font-weight: 600;
+    color: #535353;
+}
+
+@media only screen and (max-width: 1320px){
+    .related-icon-overlay {
+        width: 95%;
+        height: 20%;
+    }
+    .related-icon-overlay img{
+        width: 50px;
+        color: #535353;
+    }
+    .related-icon-overlay span{
+        font-size: 16px;
+        color: #d84646;
+    }
+    .related-carts-overlay{
+        font-size: 20px;
+    }
+}

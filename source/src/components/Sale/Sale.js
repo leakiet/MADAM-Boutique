@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ProductItem from "../Product/ProductItem";
 import './Sale.css';
 import BannerSale from '../Assets/Banner2.webp';
@@ -10,7 +10,7 @@ function Sale ({dataSale , addCart}){
             <img className='banner' src={BannerSale} alt="Banner 3" width="100%"/>
 
             <div className="path">
-                <span>HOME / </span><span>Christmas Sale</span>
+                <span><Link to='/'>HOME /</Link></span><span>Christmas Sale</span>
             </div>
             
             <div className="home">

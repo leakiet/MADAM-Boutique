@@ -29,15 +29,15 @@ function Login({ checkLogin, errorLogin, toggleLogin, logged }) {
             {errorLogin && (
                 <div className="modal-login overlay">
                         <div className="modal-login-content">
-                        <h2>Sign in Fail, Please try again</h2>
+                        <h4>Sign in Fail, Please try again</h4>
                         <button className="close-modal" onClick={toggleLogin}>X</button>
                         </div>
                 </div>)}
             {logged && (
                 <div className="modal-login overlay">
                     <div className="modal-login-content">
-                        <h2>Sign in successful</h2>
-                        <button className="close-modal" onClick={() => {toggleLogin(); navigate('/userpage')}}>X</button>
+                        <h4>Sign in successful</h4>
+                        <button className="close-modal" onClick={() => {toggleLogin(); navigate('/cart')}}>X</button>
                     </div>
                 </div>)}
         </div>

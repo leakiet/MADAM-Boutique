@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import './NavBar.css'
 import { Link } from 'react-router-dom';
 import logo_icon from '../Assets/logo_icon.png';
@@ -6,9 +6,10 @@ import arrow_down from '../Assets/down-arrow.svg'
 import cart_icon from '../Assets/cart_icon.png';
 import search_icon from '../Assets/search_icon.webp';
 import account_icon from '../Assets/account_icon.webp';
+import menu_icon from '../Assets/menu-svgrepo-com.svg'
 
 
-const NavBar = ({totalProducts, carts}) => {
+const NavBar = ({ totalProducts, searchValue, onSearch, setSearchValue }) => {
   const [menu, setMenu] = useState('');
   const [showLogin, setShowLogin] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -39,7 +40,7 @@ const NavBar = ({totalProducts, carts}) => {
   return (
     <div className='navBar'>
         <div className="nav-logo">
-          <Link to="/" onClick={()=>{setMenu("")}}><img src={logo_icon} alt='logo' width='150px'/></Link>
+          <Link to="/" onClick={()=>{setMenu("")}}><img src={logo_icon} alt='logo'/></Link>
           <p><Link to="/" onClick={()=>{setMenu("")}}>MADAM BOUTIQUE</Link></p>
         </div>
 
@@ -56,7 +57,7 @@ const NavBar = ({totalProducts, carts}) => {
                   <li onClick={()=>{setMenu("collections")}}><Link to='/WinterMemories'>WINTER MEMORIES</Link></li>
                   <li onClick={()=>{setMenu("collections")}}><Link to='/ParisianLady'>PARISIAN LADY</Link></li>
                   <li onClick={()=>{setMenu("collections")}}><Link to='/StarryNight'>STARRY NIGHT</Link></li>
-                  <li onClick={()=>{setMenu("collections")}}><Link to='/AoDai'>ÁO DÀI</Link></li>
+                  <li onClick={()=>{setMenu("collections")}}><Link to='/AoDai'>AO DAI</Link></li>
                 </ul>
           )}
           </div>
@@ -68,16 +69,24 @@ const NavBar = ({totalProducts, carts}) => {
         </ul>
 
         <ul className="nav-login-cart">
-          <Link to='/compare'>Wish List</Link>
+          {/* <div>
+              <img src={menu_icon} alt='Menu Icon' className='menu-icon'/>
+          </div> */}
           <div 
               onMouseEnter={() => setShowSearch(true)}
               onMouseLeave={() => setShowSearch(false)}
             >
-            <img onClick={()=>{setMenu("")}} src={search_icon} alt='search' width='35px'/>
+            <img onClick={()=>{setMenu("")}} src={search_icon} alt='search'/>
             {showSearch && (
-          <ul className='search-links'>
-            <li><input type='text' placeholder='Products name '/></li>
-            <li><img onClick={()=>{setMenu("")}} src={search_icon} alt='search' width='35px'/></li>
+          <ul className='search-links' >
+            <li>
+              <input type='text' placeholder='Products name' value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} required/>
+            </li>
+            <li>
+              <Link to='/searchpage'>
+                  <img onClick={()=>{setMenu(""); onSearch(searchValue)}} src={search_icon} alt='search' width='35px'/>
+              </Link>
+            </li>
           </ul>
           )}
           </div>
@@ -86,18 +95,18 @@ const NavBar = ({totalProducts, carts}) => {
             onMouseEnter={() => setShowLogin(true)}
             onMouseLeave={() => setShowLogin(false)}
           >
-          <img onClick={()=>{setMenu("")}} src={account_icon} alt='account' width='35px'/>
+          <img onClick={()=>{setMenu("")}} src={account_icon} alt='account'/>
           {showLogin && (
           <div className='account-links'>
             {localStorage.getItem('username') ? (
                 <>
                   <Link to="/userpage">My Profile</Link>
-                  <Link to="/login" onClick={() => {removeUser(); setMenu("")}}>Logout</Link>
-                  <button onClick={clearLocalStorage}>Clear localStorage</button>
+                  <Link to="/login" onClick={() => {removeUser(); setMenu("")}}>Sign out</Link>
+                  {/* <button onClick={clearLocalStorage}>Clear localStorage</button> */}
                 </>
               ) : (
                 <>
-                  <Link to="/login" onClick={()=>{setMenu("")}}>Login</Link>
+                  <Link to="/login" onClick={()=>{setMenu("")}}>Sign in</Link>
                   <Link to='/Signup'>Register</Link>
                 </>
               )}
@@ -112,7 +121,7 @@ const NavBar = ({totalProducts, carts}) => {
           {totalProducts ? (
           <Link to="/cart"><img onClick={()=>{setMenu("")}} src={cart_icon} alt='cart' width='35px'/></Link>
           ) : (
-          <img onClick={()=>{setMenu("")}} src={cart_icon} alt='cart' width='35px'/>
+          <img onClick={()=>{setMenu("")}} src={cart_icon} alt='cart'/>
           )}
           {showCarts && (
           <div className='carts-links'>

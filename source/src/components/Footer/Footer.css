@@ -11,9 +11,12 @@
     margin: auto;
     cursor: pointer;
 }
+.footer-logo img{
+    width: 150px;
+}
 .footer-logo p{
     color: #383838;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
 }
 .footer-links{
@@ -30,6 +33,9 @@
     display: flex;
     gap: 30px;
     cursor: pointer;
+}
+.footer-social-icon img{
+    width: 35px;
 }
 
 .footer-copyright{
@@ -48,4 +54,116 @@
     border-radius: 10px;
     height: 3px;
     background: black;
+}
+
+@media only screen and (max-width: 1090px){
+    .footer{
+        gap: 25px;
+        padding-top: 10px;
+    }
+    .footer-logo img{
+        width: 120px;
+    }
+    .footer-logo p{
+        font-size: 30px;
+    }
+    .footer-links{
+        gap: 40px;
+        color: #252525;
+        font-size: 18px;
+    }
+
+    .footer-social-icon{
+        gap: 30px;
+    }
+    .footer-social-icon img{
+        width: 30px;
+    }
+    
+    .footer-copyright{
+        gap: 15px;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+    .footer-copyright hr{
+        width: 80%;
+        border: none;
+        border-radius: 5px;
+        height: 3px;
+        background: black;
+    }
+}
+@media only screen and (max-width: 800px){
+    .footer{
+        gap: 20px;
+        padding-top: 10px;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
+    .footer-logo p{
+        font-size: 28px;
+    }
+    .footer-links{
+        gap: 30px;
+        color: #252525;
+        font-size: 16px;
+    }
+
+    .footer-social-icon{
+        gap: 25px;
+    }
+    .footer-social-icon img{
+        width: 25px;
+    }
+    
+    .footer-copyright{
+        gap: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .footer-copyright hr{
+        width: 80%;
+        border: none;
+        border-radius: 5px;
+        height: 2px;
+        background: black;
+    }
+}
+@media only screen and (max-width: 600px){
+    .footer{
+        gap: 20px;
+        padding-top: 10px;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
+    .footer-logo p{
+        font-size: 28px;
+    }
+    .footer-links{
+        gap: 30px;
+        color: #252525;
+        font-size: 16px;
+    }
+
+    .footer-social-icon{
+        gap: 25px;
+    }
+    .footer-social-icon img{
+        width: 25px;
+    }
+    
+    .footer-copyright{
+        gap: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .footer-copyright hr{
+        width: 80%;
+        border: none;
+        border-radius: 5px;
+        height: 2px;
+        background: black;
+    }
 }

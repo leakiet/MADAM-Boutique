@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import './Details.css';
 
 import star from '../Assets/star_icon.jpg';
 import star_haft from '../Assets/star_haft.png';
 import RelatedProducts from "../RelatedProduct/RelatedProducts";
+import Comparation from "../Comparation/Comparation";
 
 
 function Details({ addCart }) {
@@ -12,7 +13,9 @@ function Details({ addCart }) {
   const [product, setProduct] = useState('');
   const [selectedImage, setSelectedImage] = useState('');
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const [compareProducts, setCompareProducts] = useState([]);
   const [selectedComparison, setSelectedComparison] = useState([]);
+  const [compare3 , setCompare3] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,17 +23,16 @@ function Details({ addCart }) {
         // Read the JSON file
         const dataJsons = await fetch('../json_file/product.json');
         const data = await dataJsons.json();
-        // Find the selected product
+
         const selectedProduct = data.find((item) => item.id == id);
-        // Log selected product for debugging
-        console.log('Selected product:', selectedProduct);
         setProduct(selectedProduct);
-        // Fetch related products data excluding the current product
-        const relatedProductsData = data.filter((item) => item.brand === selectedProduct.brand && item.id !== selectedProduct.id);
-        // Log related products for debugging
-        console.log('Related products:', relatedProductsData);
+
+        const relatedProductsData = data.filter((item) => item.brand === selectedProduct.brand);
         setRelatedProducts(relatedProductsData);
-        // Set the default selected image as the first image
+
+        const compareData = data.filter((item) => item.brand !== selectedProduct.brand && item.category === selectedProduct.category);
+        setCompareProducts(compareData)
+
         setSelectedImage(selectedProduct.image[0]);
       } catch (error) {
         console.log('error reading json', error);
@@ -43,6 +45,7 @@ function Details({ addCart }) {
   const handleImageClick = (image) => { setSelectedImage(image) }
 
   const handleCompare = () => {
+    window.scrollTo({top:2500})
     // Add the current product to the list of selected products for comparison
     setSelectedComparison((prevProducts) => {
       const isProductInList = prevProducts.some((prevProduct) => prevProduct.id === product.id);
@@ -55,6 +58,7 @@ function Details({ addCart }) {
         return prevProducts;
       } else {
         // If the limit is reached, replace the first product with the new one
+        setCompare3(true)
         const newComparisonList = [...prevProducts];
         newComparisonList.shift(); // Remove the first product
         newComparisonList.push(product); // Add the new product to the end
@@ -67,7 +71,7 @@ function Details({ addCart }) {
   return (
     <div>
       <div className="paths">
-        <span>HOME / </span> <span>All Collections / </span> {product.name}
+        <Link to='/'>HOME </Link> / <span><Link to='/allCollections'>ALL Collections</Link>/</span> {product.name}
       </div>
 
       <div className="details">
@@ -99,26 +103,39 @@ function Details({ addCart }) {
             {product.detail}
           </div>
           <button onClick={() => addCart(product)}>ADD TO CART</button>
-          <button onClick={handleCompare}>COMPARE</button>
+          <button onClick={handleCompare}>ADD TO COMPARE</button>
+          {compare3 && (
+            <p className="notice3">Maximum 3 items for comparing</p>
+          )}
           <p className="details-right-category"><span>Category: </span>{product.category}</p>
+          <p className="details-right-category"><span>Type: </span>{product.tags}</p>
           <p className="details-right-category"><span>Brand: </span>{product.brand}</p>
           <p className="details-right-category"><span>Designer: </span>{product.designer}</p>
         </div>
       </div>
+
       <RelatedProducts relatedProducts={relatedProducts} addCart={addCart}/>
+      <Comparation compareProducts={compareProducts} addCart={addCart}/>
 
       <div className='relatedproducts'>
-        <h1>Products for Comparison</h1>
+        <h1>Compare Products</h1>
         <hr/>
-
-        {selectedComparison.map((product, index) => (
-          <div key={index}>
-            <p>{product.name}</p>
-            {/* Add more details or styling as needed */}
+        <div className="compare-items-container">
+          <div className="compare-right-items">
+            {selectedComparison.map((p, index) => (
+              <div key={index} className="compare-items">
+                <p><img src={p.image[0]} alt={p.name} width='300px'/></p>
+                <h4>{p.name}</h4>
+                <p>Price: <span className="item-price-old">{p.price_old}</span> ${p.price}</p>
+                <p>Brand: {p.brand}</p>
+                <p>Designer: {p.designer}</p>
+                <p>Type: {p.tags}</p>
+                {/* Add more details or styling as needed */}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-
+          </div>
+      </div> 
     </div>
   );
 }

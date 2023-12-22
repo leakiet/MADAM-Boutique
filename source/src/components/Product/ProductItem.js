@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import './ProductItem.css';
 import { useState } from "react";
-import cart_icon from "../Assets/cart-plus.svg"
+import cart_icon from "../Assets/cart-svgrepo-com.svg"
 
 function ProductItem({ product, addCart }) {
     const [showIcon, setShowIcon] = useState(false);
@@ -10,7 +10,6 @@ function ProductItem({ product, addCart }) {
     
     const handleProductClick = (id) => {
         navigate(`/collections/${id}`);
-        // window.location.reload();
         window.scrollTo({top: 0});
     }
 
@@ -25,16 +24,18 @@ function ProductItem({ product, addCart }) {
               onMouseEnter={() => setShowIcon(true)}
               onMouseLeave={() => setShowIcon(false)}
             >
-            <img src={product.image[0]} alt={product.name} width="100%" onClick={() => handleProductClick(product.id)}/>
+            <img src={product.image[0]} alt={product.name} onClick={() => handleProductClick(product.id)}/>
             {showIcon && (
                 <div className="icon-overlay">
                     <img src={cart_icon} alt="carticon" onClick={() =>{toggleAddCart() ; addCart(product)}}/>
+                    <span>Add to Cart</span>
                 </div>
             )}
             {showCart && (
                 <div className="carts-overlay">Item added to Cart</div>
             )}
             </div>
+            
 
             <div>
                 <p className="item-name">{product.name}</p>

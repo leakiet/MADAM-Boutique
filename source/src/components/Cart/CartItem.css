@@ -8,12 +8,12 @@
 }
 .cartlist-main{
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
     align-items: center;
     gap: 75px;
     padding: 20px 0px;
     color: #454545;
-    font-style: 18px;
+    font-size: 18px;
     font-weight: 600;
 }
 .cartItem-format{
@@ -33,16 +33,22 @@
 }
 .cartItem-quantity{
     display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
     height: 18px;
     background: #ffffff;
 }
-
 .cartItem-quantity button{
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    width: 20px;
     border: none;
-    background: none;
-    font-size: 18px;
-    font-weight: 500;
-}  
+    background: #f08a8aba;
+}
+
 .cartlist-down{
     display: flex;
     margin: 100px 0px;
@@ -82,7 +88,7 @@
     color: #555;
 }
 .cartlist-promobox{
-    width: 488px;
+    width: 385px;
     margin-top: 15px;
     padding-left: 20px;
     height: 58px;
@@ -93,14 +99,173 @@
     outline: none;
     background: transparent;
     font-size: 16px;
-    width: 313px;
+    width: 250px;
     height: 50px;
 }
 .cartlist-promobox button{
-    width: 170px;
+    width: 130px;
     height: 58px;
     font-size: 16px;
     background: black;
     color: white;
     cursor: pointer;
+}
+@media only screen and (max-width: 1090px){
+    .cartlist{
+        margin: 50px 80px;  
+    }
+
+    .cartlist-main{
+        gap: 40px;
+        padding: 10px 0px;
+        font-size: 16px;
+    }
+    .cartItem-format{
+        font-size: 16px;
+    }
+    .cartItem-product-icon{
+        height: 52px;
+    }
+    .cartItem-remove-icon{
+        width: 14px;
+        margin: 0px 25px;
+        cursor: pointer;
+    }
+    .cartItem-quantity{
+        height: 16px;
+    }
+    .cartItem-quantity button{
+        width: 18px;
+    } 
+    .cartlist-down{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 40px 0px;
+        gap: 40px;
+    }
+    .cartlist-total{
+        margin-right: 0px;
+        gap: 10px;
+    }
+    .cartlist-total h1{
+        font-size: 26px;
+    }
+    .cartlist-total-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0px;
+    }
+    .cartlist-total button{
+        width: 232px;
+        height: 48px;
+        font-size: 14px;
+    }
+    .cartlist-promocode{
+        flex: 1;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .cartlist-promobox{
+        width: 305px;
+        margin-top: 10px;
+        padding-left: 10px;
+        height: 48px;
+        background: #eaeaea;
+    }
+    .cartlist-promobox input{
+        font-size: 14px;
+        width: 200px;
+        height: 44px;
+    }
+    .cartlist-promobox button{
+        width: 100px;
+        height: 48px;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 840px){
+    .cartlist{
+        margin: 30px;  
+    }
+
+    .cartlist-main{
+        gap: 20px;
+        padding: 10px 0px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .cartlist{
+        margin: 30px;  
+    }
+
+    .cartlist-main{
+        gap: 15px;
+        padding: 5px 0px;
+        font-size: 14px;
+    }
+    .cartItem-format{
+        font-size: 14px;
+    }
+    .cartItem-product-icon{
+        height: 52px;
+    }
+    .cartItem-remove-icon{
+        width: 12px;
+        margin: 0px 15px;
+        cursor: pointer;
+    }
+    .cartItem-quantity{
+        height: 14px;
+    }
+    .cartItem-quantity button{
+        width: 18px;
+    } 
+    .cartlist-down{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 30px 0px;
+        gap: 30px;
+    }
+    .cartlist-total{
+        margin-right: 0px;
+        gap: 10px;
+    }
+    .cartlist-total h1{
+        font-size: 24px;
+    }
+    .cartlist-total-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0px;
+        font-size: 14px;
+    }
+    .cartlist-total button{
+        width: 232px;
+        height: 48px;
+        font-size: 13px;
+    }
+    .cartlist-promocode{
+        flex: 1;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .cartlist-promobox{
+        width: 305px;
+        margin-top: 10px;
+        padding-left: 10px;
+        height: 48px;
+        background: #eaeaea;
+    }
+    .cartlist-promobox input{
+        font-size: 13px;
+        width: 200px;
+        height: 44px;
+    }
+    .cartlist-promobox button{
+        width: 100px;
+        height: 48px;
+        font-size: 13px;
+    }
 }
