@@ -25,9 +25,6 @@ eProject documentation at https://github.com/leakiet/MADAM-Boutique/tree/main/do
 
 eProject video at https://drive.google.com/file/d/1pmHKiAkM3uuYequd45bdwNWvPy4k11Pl/view?usp=sharing
 
-============================
-
-eProject published at 
 
 ============================
 
