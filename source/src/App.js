@@ -37,7 +37,6 @@ function App() {
   const [filterProducts, setFilterProducts] = useState([]);
   const [searchProducts, setSearchProducts] = useState([]);
 
-  const [users, setUsers] = useState([]);
   const [errorLogin, setErrorLogin] = useState('');
   const [isLoggedin, setIsLoggedIn] = useState(false);
   const [logged, setLogged] = useState('');
@@ -87,11 +86,6 @@ function App() {
         setProducts(productData);
         setFilterProducts(productData);
         setSearchProducts(productData);
-
-        const userJson = await fetch('../json_file/user.json');
-        const usertData = await userJson.json();
-        setUsers(usertData);
-
       } catch (error) {
         console.log('error reading json');
       }
@@ -211,9 +205,7 @@ function App() {
 
   const checkLogin = (checkUser) => {
     const savedUser = JSON.parse(localStorage.getItem('user-data')) || [];
-    const findUser = ((users.find(u => u.username === checkUser.loginUsername
-      && u.password === checkUser.loginPassword)) ||
-      (savedUser && savedUser.find(u => u.username === checkUser.loginUsername && u.password === checkUser.loginPassword)))
+    const findUser = (savedUser && savedUser.find(u => u.username === checkUser.loginUsername && u.password === checkUser.loginPassword))
     console.log(savedUser);
     if (findUser) {
       localStorage.setItem('username', JSON.stringify(checkUser));
