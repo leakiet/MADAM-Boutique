@@ -22,7 +22,7 @@ Student1479461  Lê Anh Kiệt
 eProject documentation at https://github.com/leakiet/MADAM-Boutique/tree/main/document
 
 ============================
-eProject video at 
+eProject video at https://drive.google.com/file/d/1pmHKiAkM3uuYequd45bdwNWvPy4k11Pl/view?usp=sharing
 
 ============================
 
